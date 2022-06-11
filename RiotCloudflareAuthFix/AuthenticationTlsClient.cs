@@ -58,11 +58,9 @@ namespace RiotCloudflareAuthFix {
 			NamedGroup.x25519,
 			NamedGroup.secp256r1,
 			NamedGroup.secp384r1,
-			NamedGroup.secp521r1,
-			NamedGroup.x448
 		};
 
-		public ProtocolVersion[] SupportedVersions { get; set; } = ProtocolVersion.TLSv13.DownTo(ProtocolVersion.TLSv12);
+		public ProtocolVersion[] SupportedVersions { get; set; } = ProtocolVersion.TLSv13.DownTo(ProtocolVersion.TLSv10);
 
 		public AuthenticationTlsClient() : base(new BcTlsCrypto(new SecureRandom())) {
 		}
