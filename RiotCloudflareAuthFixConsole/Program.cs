@@ -9,7 +9,7 @@ var client = new AuthenticationJsonClient {
 	SerializerOptions = new() { PropertyNameCaseInsensitive = true }
 };
 
-client.DefaultRequestHeaders.Add("User-Agent", "RiotClient/44.0.1.4223069.4190634 rso-auth (Windows;10;;Professional, x64)");
+client.DefaultRequestHeaders.Add("User-Agent", "RiotClient/51.0.0.4429735.4381201 rso-auth (Windows;10;;Professional, x64)");
 client.DefaultRequestHeaders.Add("X-Curl-Source", "Api");
 
 // retrieve the auth cookies
