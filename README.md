@@ -11,9 +11,6 @@ Mimicking TLS handshake and headers of Riot Client to bypass CloudFlare restrict
 
 ## TLS Versions
 - TLS 1.3
-- TLS 1.2
-- TLS 1.1
-- TLS 1.0
 
 ## Cipher Suites
 - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
