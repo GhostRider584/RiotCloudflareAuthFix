@@ -51,7 +51,9 @@ namespace RiotCloudflareAuthFix {
 			CipherSuite.TLS_RSA_WITH_AES_128_GCM_SHA256,
 			CipherSuite.TLS_RSA_WITH_AES_256_GCM_SHA384,
 			CipherSuite.TLS_RSA_WITH_AES_128_CBC_SHA,
-			CipherSuite.TLS_RSA_WITH_AES_256_CBC_SHA
+			CipherSuite.TLS_RSA_WITH_AES_256_CBC_SHA,
+			CipherSuite.TLS_RSA_WITH_3DES_EDE_CBC_SHA,
+			CipherSuite.TLS_EMPTY_RENEGOTIATION_INFO_SCSV
 		};
 
 		public int[] SupportedGroups { get; set; } = new[] {
@@ -70,7 +72,7 @@ namespace RiotCloudflareAuthFix {
 		protected override IList GetSupportedSignatureAlgorithms() => (IList)SignatureAlgorithms;
 		protected override int[] GetSupportedCipherSuites() => SupportedCiphers;
 		protected override IList? GetSniServerNames() => _serverNames;
-
+		
 		protected override IList GetSupportedGroups(IList namedGroupRoles) {
 			var supportedGroups = new ArrayList();
 			TlsUtilities.AddIfSupported(supportedGroups, Crypto, SupportedGroups);
